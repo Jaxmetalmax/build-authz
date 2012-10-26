@@ -1,5 +1,5 @@
 object frmBuildAuthz: TfrmBuildAuthz
-  Left = 214
+  Left = 268
   Height = 525
   Top = 46
   Width = 738

@@ -1,5 +1,5 @@
 object frmAcercade: TfrmAcercade
-  Left = 324
+  Left = 405
   Height = 233
   Top = 190
   Width = 375
