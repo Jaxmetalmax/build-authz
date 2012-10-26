@@ -1,0 +1,117 @@
+object frmAcercade: TfrmAcercade
+  Left = 403
+  Height = 233
+  Top = 190
+  Width = 375
+  BorderStyle = bsNone
+  Caption = 'Acerca de Build Authz...'
+  ClientHeight = 233
+  ClientWidth = 375
+  OnClick = FormClick
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.0.2.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 233
+    Top = 0
+    Width = 375
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Acerca de...'
+      ClientHeight = 202
+      ClientWidth = 371
+      ParentFont = False
+      object Label1: TLabel
+        Left = 12
+        Height = 17
+        Top = 90
+        Width = 112
+        Caption = 'Build Authz v1.0'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 12
+        Height = 75
+        Top = 10
+        Width = 348
+        Caption = 'Build Authz,  herramienta de ayuda para '#13#10'la creación del archivo de configuración'#13#10' "authz" para repositorios SubVersion.'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Ubuntu'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 12
+        Height = 1
+        Top = 114
+        Width = 1
+        ParentColor = False
+      end
+      object Button1: TButton
+        Left = 285
+        Height = 25
+        Top = 164
+        Width = 75
+        Caption = 'Cerrar'
+        OnClick = Button1Click
+        TabOrder = 0
+      end
+      object StaticText1: TStaticText
+        Left = 12
+        Height = 25
+        Top = 147
+        Width = 209
+        Caption = 'http://jaxmaxblogit.tk'
+        Color = clNone
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Linux Biolinum G'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        OnClick = StaticText1Click
+        ParentFont = False
+        ParentColor = False
+        TabOrder = 1
+      end
+      object Label4: TLabel
+        Left = 12
+        Height = 18
+        Top = 131
+        Width = 44
+        Caption = 'Home:'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 12
+        Height = 18
+        Top = 171
+        Width = 236
+        Caption = 'Como configurar archivo "authz"'
+        Font.Height = -15
+        Font.Name = 'Ubuntu'
+        Font.Style = [fsBold, fsUnderline]
+        ParentColor = False
+        ParentFont = False
+        OnClick = Label5Click
+      end
+    end
+  end
+end
