@@ -1,7 +1,7 @@
 object frmBuildAuthz: TfrmBuildAuthz
   Left = 265
   Height = 525
-  Top = 150
+  Top = 46
   Width = 738
   BorderStyle = bsSingle
   Caption = 'Build Authz'
@@ -1268,7 +1268,7 @@ object frmBuildAuthz: TfrmBuildAuthz
   end
   object Memo2: TMemo
     Left = 472
-    Height = 90
+    Height = 106
     Top = 352
     Width = 240
     Lines.Strings = (

@@ -184,76 +184,78 @@ begin
         lcArchivoConfig := TStringList.Create;
         lcArchivoConfig.LoadFromFile(OpenDialog1.FileName);
 
-        lstUsuarios.Items.Clear;
-        lnInicio:=1;
+        if lcArchivoConfig[1] <> '[Sección Grupos]'then begin
 
-        {
-         Vamos leyendo las secciones del archivo de configuración
-         y limpiamos los controles donde cargaremos esa información
-         antes de cargarla.
-        }
-        {sección de lista de usuarios}
-        repeat
-            lstUsuarios.Items.Add(lcArchivoConfig[lnInicio]);
+            lstUsuarios.Items.Clear;
+            lnInicio:=1;
+
+            {
+             Vamos leyendo las secciones del archivo de configuración
+             y limpiamos los controles donde cargaremos esa información
+             antes de cargarla.
+            }
+            {sección de lista de usuarios}
+            repeat
+                lstUsuarios.Items.Add(lcArchivoConfig[lnInicio]);
+                lnInicio:=lnInicio+1;
+            until lcArchivoConfig[lnInicio] = '[Sección Grupos]';
             lnInicio:=lnInicio+1;
-        until lcArchivoConfig[lnInicio] = '[Sección Grupos]';
-        lnInicio:=lnInicio+1;
 
-        {sección de lista de grupos}
-        lstGrupos.Items.Clear;
-        repeat
-            lstGrupos.Items.Add(lcArchivoConfig[lnInicio]);
+            {sección de lista de grupos}
+            lstGrupos.Items.Clear;
+            repeat
+                lstGrupos.Items.Add(lcArchivoConfig[lnInicio]);
+                lnInicio:=lnInicio+1;
+            until lcArchivoConfig[lnInicio] = '[Sección Treeview]';
+
+            {Carga de treeview}
+            TreeView1.Items.Clear;
+            TreeView1.LoadFromFile(OpenDialog1.FileName+'.trv');
+            lnItems:=TreeView1.Items.Count;
             lnInicio:=lnInicio+1;
-        until lcArchivoConfig[lnInicio] = '[Sección Treeview]';
+            for lnNodo:=0 to lnItems-1 do begin
+                TreeView1.Items.Item[lnNodo].ImageIndex:=0;
+                TreeView1.Items.Item[lnNodo].SelectedIndex:=0;
+            end;
+            lnInicio:=lnInicio+2;
 
-        {Carga de treeview}
-        TreeView1.Items.Clear;
-        TreeView1.LoadFromFile(OpenDialog1.FileName+'.trv');
-        lnItems:=TreeView1.Items.Count;
-        lnInicio:=lnInicio+1;
-        for lnNodo:=0 to lnItems-1 do begin
-            TreeView1.Items.Item[lnNodo].ImageIndex:=0;
-            TreeView1.Items.Item[lnNodo].SelectedIndex:=0;
+            {Carga de vista previa}
+            Memo1.Lines.Clear;
+            repeat
+                Memo1.Lines.Append(lcArchivoConfig[lnInicio]);
+                lnInicio:=lnInicio+1;
+            until lcArchivoConfig[lnInicio] = '[Sección Grid]';
+            lnInicio:=lnInicio+2;
+
+            {Carga de grid}
+            grdGrupos.Clear;
+            grdGrupos.LoadFromFile(OpenDialog1.FileName+'.xml');
+            grdGrupos.Refresh;
+            lnInicio:=lnInicio+1;
+
+            {Carga de combobox de usuarios}
+            cmbUsuarios.Items.Clear;
+            repeat
+                cmbUsuarios.Items.Append(lcArchivoConfig[lnInicio]);
+                lnInicio:=lnInicio+1;
+            until lcArchivoConfig[lnInicio] = '[Sección combogrupo]';
+            lnInicio:=lnInicio+1;
+
+            {Carga de combobox de grupos}
+            cmbGrupos.Items.Clear;
+            repeat
+                cmbGrupos.Items.Append(lcArchivoConfig[lnInicio]);
+                lnInicio:=lnInicio+1;
+            until lcArchivoConfig[lnInicio] = '[fin]';
+
+            lcArchivoConfig.Free;
+
+            lcFileName:=OpenDialog1.FileName;
+
+            Delete(lcFileName,Length(lcFileName)-6,7);
+            frmBuildAuthz.Caption:= 'Build Authz - ' + lcFileName;
         end;
-        lnInicio:=lnInicio+2;
-
-        {Carga de vista previa}
-        Memo1.Lines.Clear;
-        repeat
-            Memo1.Lines.Append(lcArchivoConfig[lnInicio]);
-            lnInicio:=lnInicio+1;
-        until lcArchivoConfig[lnInicio] = '[Sección Grid]';
-        lnInicio:=lnInicio+2;
-
-        {Carga de grid}
-        grdGrupos.Clear;
-        grdGrupos.LoadFromFile(OpenDialog1.FileName+'.xml');
-        grdGrupos.Refresh;
-        lnInicio:=lnInicio+1;
-
-        {Carga de combobox de usuarios}
-        cmbUsuarios.Items.Clear;
-        repeat
-            cmbUsuarios.Items.Append(lcArchivoConfig[lnInicio]);
-            lnInicio:=lnInicio+1;
-        until lcArchivoConfig[lnInicio] = '[Sección combogrupo]';
-        lnInicio:=lnInicio+1;
-
-        {Carga de combobox de grupos}
-        cmbGrupos.Items.Clear;
-        repeat
-            cmbGrupos.Items.Append(lcArchivoConfig[lnInicio]);
-            lnInicio:=lnInicio+1;
-        until lcArchivoConfig[lnInicio] = '[fin]';
-
-        lcArchivoConfig.Free;
-
-        lcFileName:=OpenDialog1.FileName;
-
-        Delete(lcFileName,Length(lcFileName)-6,7);
-        frmBuildAuthz.Caption:= 'Build Authz - ' + lcFileName;
     end;
-
 end;
 
 procedure TfrmBuildAuthz.btnGuardaClick(Sender: TObject);
