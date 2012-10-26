@@ -27,17 +27,16 @@ object frmAcercade: TfrmAcercade
       ParentFont = False
       object Label1: TLabel
         Left = 12
-        Height = 17
+        Height = 20
         Top = 90
-        Width = 112
+        Width = 118
         Caption = 'Build Authz v1.0'
         Font.CharSet = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -16
-        Font.Name = 'Calibri'
+        Font.Name = 'Ubuntu'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
-        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
@@ -82,10 +81,9 @@ object frmAcercade: TfrmAcercade
         Font.CharSet = ANSI_CHARSET
         Font.Color = clBlack
         Font.Height = -16
-        Font.Name = 'Linux Biolinum G'
+        Font.Name = 'Ubuntu'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
-        Font.Style = [fsBold]
         OnClick = StaticText1Click
         ParentFont = False
         ParentColor = False
@@ -93,11 +91,14 @@ object frmAcercade: TfrmAcercade
       end
       object Label4: TLabel
         Left = 12
-        Height = 18
+        Height = 17
         Top = 131
-        Width = 44
+        Width = 39
         Caption = 'Home:'
+        Font.Height = -13
+        Font.Name = 'Ubuntu'
         ParentColor = False
+        ParentFont = False
       end
       object Label5: TLabel
         Left = 12

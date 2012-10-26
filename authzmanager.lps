@@ -10,12 +10,43 @@
         <UnitName Value="authzmanager"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4"/>
-        <CursorPos X="53" Y="18"/>
+        <TopLine Value="1"/>
+        <CursorPos X="4" Y="1"/>
         <UsageCount Value="111"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
+        <Filename Value="buildauthz.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBuildAuthz"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="buildauthz"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="14" Y="3"/>
+        <UsageCount Value="96"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="acercade.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAcercade"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="acercade"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="4" Y="5"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="main.pas"/>
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
@@ -25,8 +56,8 @@
         <TopLine Value="39"/>
         <CursorPos X="33" Y="47"/>
         <UsageCount Value="110"/>
-      </Unit1>
-      <Unit2>
+      </Unit3>
+      <Unit4>
         <Filename Value="users.pas"/>
         <ComponentName Value="frmUsers"/>
         <HasResources Value="True"/>
@@ -36,8 +67,8 @@
         <TopLine Value="126"/>
         <CursorPos X="5" Y="128"/>
         <UsageCount Value="110"/>
-      </Unit2>
-      <Unit3>
+      </Unit4>
+      <Unit5>
         <Filename Value="groups.pas"/>
         <ComponentName Value="frmGroups"/>
         <HasResources Value="True"/>
@@ -47,37 +78,6 @@
         <TopLine Value="115"/>
         <CursorPos X="3" Y="132"/>
         <UsageCount Value="105"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="buildauthz.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmBuildAuthz"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="buildauthz"/>
-        <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="169"/>
-        <CursorPos X="27" Y="127"/>
-        <UsageCount Value="96"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="acercade.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmAcercade"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="acercade"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="87"/>
-        <CursorPos X="94" Y="89"/>
-        <UsageCount Value="24"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="frmusers.pas"/>
