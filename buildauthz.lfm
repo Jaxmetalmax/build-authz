@@ -64,6 +64,7 @@ object frmBuildAuthz: TfrmBuildAuthz
     ItemHeight = 0
     OnDblClick = lstGruposDblClick
     ParentShowHint = False
+    PopupMenu = PopupMenu2
     ScrollWidth = 134
     ShowHint = True
     TabOrder = 10
@@ -1203,7 +1204,7 @@ object frmBuildAuthz: TfrmBuildAuthz
     end
     object btnCerrar: TToolButton
       Left = 185
-      Hint = 'Cerrar.'
+      Hint = 'Cerrar'
       Top = 2
       Caption = 'btnCerrar'
       ImageIndex = 3
@@ -1220,6 +1221,7 @@ object frmBuildAuthz: TfrmBuildAuthz
     end
     object btnAcercade: TToolButton
       Left = 231
+      Hint = 'Acerca de...'
       Top = 2
       Caption = ' Acerca de'
       ImageIndex = 6

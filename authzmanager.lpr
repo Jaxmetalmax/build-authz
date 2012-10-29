@@ -31,7 +31,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Title:='buildauthz';
+  Application.Title:='Build Authz V1.0';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TfrmBuildAuthz, frmBuildAuthz);
