@@ -448,7 +448,7 @@ begin
         for c:=0 to grdGrupos.Columns.Count-1 do begin
             for r:=1 to grdGrupos.RowCount-1 do begin
                 if lstUsuarios.Items[index] = grdGrupos.Cells[c,r] then begin
-                   ShowMessage('no puede borrar usuario si se encuentra en un grupo');
+                   ShowMessage('No puede borrar usuario si se encuentra en un grupo');
                    lcFound:=True;
                    Break;
                 end;
@@ -480,7 +480,7 @@ begin
     if index > -1 then begin
         for r:=1 to grdGrupos.RowCount-1 do begin
             if lstGrupos.Items[index] = grdGrupos.Cells[0,r] then begin
-                ShowMessage('no puede borrar grupo si se encuentra en el grid');
+                ShowMessage('No puede borrar grupo si se encuentra en el grid');
                 lcFound:=True;
                 Break;
             end;

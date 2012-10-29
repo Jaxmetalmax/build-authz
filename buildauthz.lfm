@@ -13,9 +13,9 @@ object frmBuildAuthz: TfrmBuildAuthz
   LCLVersion = '1.0.2.0'
   object Label1: TLabel
     Left = 8
-    Height = 14
+    Height = 18
     Top = 40
-    Width = 46
+    Width = 62
     Caption = 'Usuarios:'
     ParentColor = False
   end
@@ -32,10 +32,11 @@ object frmBuildAuthz: TfrmBuildAuthz
     ScrollWidth = 134
     ShowHint = True
     TabOrder = 0
+    TopIndex = -1
   end
   object txtUsuario: TEdit
     Left = 8
-    Height = 21
+    Height = 27
     Hint = 'Presiona Enter para agregar los usuarios.'
     Top = 56
     Width = 136
@@ -46,7 +47,7 @@ object frmBuildAuthz: TfrmBuildAuthz
   end
   object txtGrupo: TEdit
     Left = 152
-    Height = 21
+    Height = 27
     Hint = 'Presiona Enter para agregar los grupos.'
     Top = 56
     Width = 136
@@ -68,12 +69,13 @@ object frmBuildAuthz: TfrmBuildAuthz
     ScrollWidth = 134
     ShowHint = True
     TabOrder = 10
+    TopIndex = -1
   end
   object Label2: TLabel
     Left = 152
-    Height = 14
+    Height = 18
     Top = 40
-    Width = 39
+    Width = 51
     Caption = 'Grupos:'
     ParentColor = False
   end
@@ -103,20 +105,20 @@ object frmBuildAuthz: TfrmBuildAuthz
   end
   object cmbUsuarios: TComboBox
     Left = 296
-    Height = 21
+    Height = 29
     Top = 472
     Width = 100
-    ItemHeight = 13
+    ItemHeight = 0
     OnEditingDone = cmbUsuariosEditingDone
     TabOrder = 12
     Visible = False
   end
   object cmbGrupos: TComboBox
     Left = 408
-    Height = 21
+    Height = 29
     Top = 472
     Width = 100
-    ItemHeight = 13
+    ItemHeight = 0
     OnEditingDone = cmbGruposEditingDone
     TabOrder = 13
     Visible = False
@@ -439,9 +441,9 @@ object frmBuildAuthz: TfrmBuildAuthz
   end
   object Label3: TLabel
     Left = 296
-    Height = 14
+    Height = 18
     Top = 40
-    Width = 118
+    Width = 157
     Caption = 'Estructura de directorio:'
     ParentColor = False
   end
@@ -739,7 +741,7 @@ object frmBuildAuthz: TfrmBuildAuthz
     Top = 40
     Width = 256
     Caption = 'Permisos'
-    ClientHeight = 85
+    ClientHeight = 84
     ClientWidth = 252
     TabOrder = 7
     object btnLectura: TBitBtn
@@ -831,9 +833,9 @@ object frmBuildAuthz: TfrmBuildAuthz
     end
     object Label4: TLabel
       Left = 54
-      Height = 14
+      Height = 18
       Top = 16
-      Width = 37
+      Width = 49
       Caption = 'Lectura'
       ParentColor = False
     end
@@ -1100,25 +1102,25 @@ object frmBuildAuthz: TfrmBuildAuthz
     end
     object Label5: TLabel
       Left = 54
-      Height = 27
+      Height = 39
       Top = 48
-      Width = 37
+      Width = 49
       Caption = 'Lectura'#13#10'a todos'
       ParentColor = False
     end
     object Label6: TLabel
       Left = 177
-      Height = 27
+      Height = 39
       Top = 11
-      Width = 43
+      Width = 58
       Caption = 'Lectura'#13#10'Escritura'
       ParentColor = False
     end
     object Label7: TLabel
       Left = 177
-      Height = 27
+      Height = 39
       Top = 48
-      Width = 52
+      Width = 71
       Caption = 'Acceso'#13#10'restringido'
       ParentColor = False
     end
@@ -1230,41 +1232,41 @@ object frmBuildAuthz: TfrmBuildAuthz
   end
   object Label8: TLabel
     Left = 48
-    Height = 14
+    Height = 18
     Top = 319
-    Width = 75
+    Width = 101
     Caption = 'Agrega Usuario'
     ParentColor = False
   end
   object Label9: TLabel
     Left = 192
-    Height = 14
+    Height = 18
     Top = 320
-    Width = 68
+    Width = 90
     Caption = 'Agrega Grupo'
     ParentColor = False
   end
   object Label10: TLabel
     Left = 336
-    Height = 14
+    Height = 18
     Top = 319
-    Width = 78
+    Width = 105
     Caption = 'Abre repositorio'
     ParentColor = False
   end
   object Label11: TLabel
     Left = 512
-    Height = 14
+    Height = 18
     Top = 319
-    Width = 30
+    Width = 45
     Caption = 'Limpia'
     ParentColor = False
   end
   object Label12: TLabel
     Left = 472
-    Height = 14
+    Height = 18
     Top = 152
-    Width = 121
+    Width = 167
     Caption = 'Vista previa de permisos:'
     ParentColor = False
   end
