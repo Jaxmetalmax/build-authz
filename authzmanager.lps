@@ -12,7 +12,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="24"/>
         <CursorPos X="12" Y="27"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="135"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -25,9 +25,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="441"/>
-        <CursorPos X="34" Y="451"/>
-        <UsageCount Value="101"/>
+        <TopLine Value="429"/>
+        <CursorPos X="13" Y="439"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -40,9 +40,9 @@
         <UnitName Value="acercade"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="53"/>
-        <CursorPos X="86" Y="108"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="107"/>
+        <CursorPos X="43" Y="62"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -55,7 +55,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="39"/>
         <CursorPos X="33" Y="47"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="108"/>
       </Unit3>
       <Unit4>
         <Filename Value="users.pas"/>
@@ -66,7 +66,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="126"/>
         <CursorPos X="5" Y="128"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="108"/>
       </Unit4>
       <Unit5>
         <Filename Value="groups.pas"/>
@@ -77,7 +77,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="115"/>
         <CursorPos X="3" Y="132"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="103"/>
       </Unit5>
       <Unit6>
         <Filename Value="frmusers.pas"/>
@@ -87,14 +87,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
         <CursorPos X="66" Y="43"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit6>
       <Unit7>
         <Filename Value="users.lfm"/>
         <WindowIndex Value="0"/>
         <TopLine Value="37"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit7>
       <Unit8>
@@ -102,7 +102,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2177"/>
         <CursorPos X="1" Y="2186"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit8>
       <Unit9>
         <Filename Value="../../../../lazarus/lcl/grids.pas"/>
@@ -110,50 +110,51 @@
         <WindowIndex Value="0"/>
         <TopLine Value="8663"/>
         <CursorPos X="1" Y="8675"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit9>
       <Unit10>
         <Filename Value="../../../../lazarus/lcl/interfaces/win32/win32listsl.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="161"/>
         <CursorPos X="1" Y="173"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit10>
       <Unit11>
         <Filename Value="../../../../lazarus/lcl/include/control.inc"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1518"/>
-        <CursorPos X="1" Y="1530"/>
-        <UsageCount Value="1"/>
+        <TopLine Value="2706"/>
+        <CursorPos X="1" Y="2718"/>
+        <UsageCount Value="9"/>
       </Unit11>
       <Unit12>
-        <Filename Value="/usr/share/lazarus/1.0.2/lcl/include/customform.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1806"/>
-        <CursorPos X="1" Y="1820"/>
-        <UsageCount Value="1"/>
-      </Unit12>
-      <Unit13>
         <Filename Value="../../../../lazarus/lcl/include/menuitem.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="74"/>
         <CursorPos X="1" Y="85"/>
-        <UsageCount Value="4"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="3"/>
+      </Unit12>
+      <Unit13>
         <Filename Value="../../../../lazarus/lcl/include/treeview.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2476"/>
         <CursorPos X="1" Y="2488"/>
-        <UsageCount Value="9"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="8"/>
+      </Unit13>
+      <Unit14>
         <Filename Value="../../../../lazarus/components/rtticontrols/rttictrls.pas"/>
         <UnitName Value="RTTICtrls"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3786"/>
         <CursorPos X="1" Y="3798"/>
+        <UsageCount Value="8"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="buildauthz.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="521"/>
+        <CursorPos X="1" Y="1"/>
         <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit15>
     </Units>
     <General>
@@ -162,123 +163,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="193" Column="1" TopLine="179"/>
+        <Caret Line="557" Column="1" TopLine="543"/>
       </Position1>
       <Position2>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="188" Column="1" TopLine="179"/>
+        <Caret Line="558" Column="1" TopLine="543"/>
       </Position2>
       <Position3>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="559" Column="1" TopLine="543"/>
       </Position3>
       <Position4>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="9" Column="74" TopLine="1"/>
+        <Caret Line="560" Column="1" TopLine="543"/>
       </Position4>
       <Position5>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="41" Column="16" TopLine="19"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="561" Column="1" TopLine="543"/>
       </Position5>
       <Position6>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="5" Column="63" TopLine="1"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="562" Column="1" TopLine="543"/>
       </Position6>
       <Position7>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="69" Column="3" TopLine="67"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="563" Column="1" TopLine="543"/>
       </Position7>
       <Position8>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="70" Column="35" TopLine="56"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="546" Column="28" TopLine="537"/>
       </Position8>
       <Position9>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="32" Column="30" TopLine="20"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="179" Column="20" TopLine="172"/>
       </Position9>
       <Position10>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="30" Column="49" TopLine="15"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="146" Column="30" TopLine="134"/>
       </Position10>
       <Position11>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="11" Column="31" TopLine="1"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="170" Column="20" TopLine="150"/>
       </Position11>
       <Position12>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="12" Column="51" TopLine="1"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="176" Column="58" TopLine="156"/>
       </Position12>
       <Position13>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="45" Column="17" TopLine="34"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="179" Column="20" TopLine="159"/>
       </Position13>
       <Position14>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="57" Column="33" TopLine="1"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="836" Column="41" TopLine="825"/>
       </Position14>
       <Position15>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="56" Column="33" TopLine="32"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="608" Column="1" TopLine="599"/>
       </Position15>
       <Position16>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="66" Column="13" TopLine="56"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="341" Column="5" TopLine="338"/>
       </Position16>
       <Position17>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="67" Column="13" TopLine="57"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="813" Column="1" TopLine="805"/>
       </Position17>
       <Position18>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="68" Column="13" TopLine="58"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="273" Column="5" TopLine="273"/>
       </Position18>
       <Position19>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="69" Column="13" TopLine="59"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="821" Column="36" TopLine="805"/>
       </Position19>
       <Position20>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="68" Column="13" TopLine="58"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="808" Column="5" TopLine="806"/>
       </Position20>
       <Position21>
-        <Filename Value="acercade.pas"/>
-        <Caret Line="67" Column="13" TopLine="57"/>
+        <Filename Value="buildauthz.pas"/>
+        <Caret Line="393" Column="1" TopLine="330"/>
       </Position21>
       <Position22>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="358" Column="26" TopLine="353"/>
+        <Caret Line="495" Column="1" TopLine="487"/>
       </Position22>
       <Position23>
         <Filename Value="acercade.pas"/>
-        <Caret Line="68" Column="13" TopLine="58"/>
+        <Caret Line="107" Column="13" TopLine="95"/>
       </Position23>
       <Position24>
-        <Filename Value="buildauthz.pas"/>
-        <Caret Line="5" Column="22" TopLine="1"/>
+        <Filename Value="acercade.pas"/>
+        <Caret Line="108" Column="13" TopLine="96"/>
       </Position24>
       <Position25>
         <Filename Value="acercade.pas"/>
-        <Caret Line="101" Column="5" TopLine="84"/>
+        <Caret Line="115" Column="13" TopLine="103"/>
       </Position25>
       <Position26>
         <Filename Value="acercade.pas"/>
-        <Caret Line="100" Column="79" TopLine="97"/>
+        <Caret Line="52" Column="43" TopLine="48"/>
       </Position26>
       <Position27>
         <Filename Value="acercade.pas"/>
-        <Caret Line="121" Column="12" TopLine="97"/>
+        <Caret Line="53" Column="43" TopLine="49"/>
       </Position27>
       <Position28>
         <Filename Value="acercade.pas"/>
-        <Caret Line="103" Column="34" TopLine="85"/>
+        <Caret Line="54" Column="43" TopLine="50"/>
       </Position28>
       <Position29>
-        <Filename Value="buildauthz.pas"/>
-        <Caret Line="163" Column="94" TopLine="163"/>
+        <Filename Value="acercade.pas"/>
+        <Caret Line="55" Column="43" TopLine="51"/>
       </Position29>
       <Position30>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="470" Column="92" TopLine="466"/>
+        <Caret Line="403" Column="104" TopLine="459"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

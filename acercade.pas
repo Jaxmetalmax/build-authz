@@ -42,9 +42,15 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
     PageControl1: TPageControl;
     StaticText1: TStaticText;
+    StaticText2: TStaticText;
+    StaticText3: TStaticText;
     TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
     procedure Button1Click(Sender: TObject);
     procedure FormClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

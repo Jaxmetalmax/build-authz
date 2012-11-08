@@ -26,8 +26,8 @@ unit buildauthz;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
-  ComCtrls, ActnList, StdCtrls, Buttons, Grids, Menus, ExtCtrls, acercade;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  ActnList, StdCtrls, Buttons, Grids, Menus, ExtCtrls, acercade, process;
 
 type
 
@@ -37,6 +37,8 @@ type
     AddComboGrupo: TAction;
     AddComboUser: TAction;
     ActionList1: TActionList;
+    btnCargaPreview: TBitBtn;
+    btnGuardaPreview: TBitBtn;
     btnLectEscr: TBitBtn;
     btnLectTodos: TBitBtn;
     btnLectura: TBitBtn;
@@ -54,6 +56,8 @@ type
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -66,10 +70,14 @@ type
     grdGrupos: TStringGrid;
     Memo1: TMemo;
     Memo2: TMemo;
+    pmCargaUsuario: TMenuItem;
+    OpenDialog2: TOpenDialog;
     pmBorraGrupo: TMenuItem;
     pmBorra: TMenuItem;
     PopupMenu1: TPopupMenu;
     PopupMenu2: TPopupMenu;
+    svdlgPreview: TSaveDialog;
+    SelectDirectoryDialog2: TSelectDirectoryDialog;
     svdlgAuthz: TSaveDialog;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     ToolBar1: TToolBar;
@@ -78,12 +86,14 @@ type
     ToolButton1: TToolButton;
     ToolButton2: TToolButton;
     btnCarga: TToolButton;
-    btnAcercade: TToolButton;
+    btnValidaAuthz: TToolButton;
+    ToolButton3: TToolButton;
     ToolButton4: TToolButton;
     btnGuarda: TToolButton;
     ToolButton5: TToolButton;
     ToolButton6: TToolButton;
     btnCerrar: TToolButton;
+    btnAcercade: TToolButton;
     TreeView1: TTreeView;
     txtUsuario: TEdit;
     GuardaArchivo: TAction;
@@ -96,9 +106,12 @@ type
     txtGrupo: TEdit;
     procedure AddComboGrupoExecute(Sender: TObject);
     procedure AddComboUserExecute(Sender: TObject);
+    procedure btnAcercadeClick(Sender: TObject);
     procedure btnBuildAuthzClick(Sender: TObject);
     procedure btnCargaClick(Sender: TObject);
+    procedure btnCargaPreviewClick(Sender: TObject);
     procedure btnGuardaClick(Sender: TObject);
+    procedure btnGuardaPreviewClick(Sender: TObject);
     procedure btnLectTodosClick(Sender: TObject);
     procedure btnNuevoClick(Sender: TObject);
     procedure btnSeleccionaDirClick(Sender: TObject);
@@ -116,10 +129,11 @@ type
       var Editor: TWinControl);
     procedure lstGruposDblClick(Sender: TObject);
     procedure lstUsuariosDblClick(Sender: TObject);
+    procedure pmCargaUsuarioClick(Sender: TObject);
     procedure pmBorraClick(Sender: TObject);
     procedure pmBorraGrupoClick(Sender: TObject);
     procedure btnCerrarClick(Sender: TObject);
-    procedure btnAcercadeClick(Sender: TObject);
+    procedure btnValidaAuthzClick(Sender: TObject);
     procedure TreeView1DblClick(Sender: TObject);
     procedure txtGrupoKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtUsuarioKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
@@ -376,6 +390,82 @@ begin
     frmBuildAuthz.Close;
 end;
 
+procedure TfrmBuildAuthz.btnValidaAuthzClick(Sender: TObject);
+var
+  lcProceso: TProcess;
+  lcOutput: TStringList;
+  lcMensaje: string;
+  lnInicio: integer;
+begin
+    {
+      Proceso que lanza la herramienta svnauthz-validate para validar
+      la configuración del archivo authz que realizamos, si es Windows la
+      herramienta viene empaquetada con la aplicación en un directorio
+      llamado "svn-tools", si es ejecutada en Linux/Unix la ejecuta directa
+      suponiendo que esta instalada y accesible desde el path.
+    }
+    {$IFDEF WINDOWS}
+        {Definimos el directorio inicial para el dialogo de seleccionar
+        el directorio donde esta la herramienta svnauthz-validate, el
+        directorio de inicio es donde se encuentra el ejecutable de Build Authz}
+        SelectDirectoryDialog2.InitialDir:= ExtractFilePath(ParamStr(0));
+        if SelectDirectoryDialog2.Execute then begin
+            if OpenDialog2.Execute then begin
+                lcMensaje:='';
+
+                lcProceso := TProcess.Create(nil);
+                //Seleccionamos directorio de trabajo donde esta la herramienta svnauthz-validate
+                lcProceso.CurrentDirectory:=SelectDirectoryDialog2.FileName;
+                lcProceso.Executable := 'svnauthz-validate.exe';
+                lcProceso.Parameters.Add(OpenDialog2.FileName);
+                lcProceso.Options := [poUsePipes,poNoConsole,poStderrToOutPut,poWaitOnExit];
+                lcProceso.Execute;
+
+                lcOutput := TStringList.Create;
+                lcOutput.LoadFromStream(lcProceso.Output);
+
+                if lcOutput.Count > 0 then begin
+                    for lnInicio:=0 to lcOutput.Count-1 do begin
+                        lcMensaje:= lcMensaje + lcOutput.Strings[lnInicio] + #13#10;
+                    end;
+                    ShowMessage(lcMensaje);
+                end
+                else begin
+                    ShowMessage('Formato de archivo valido.');
+                end;
+                lcProceso.Free;
+                lcOutput.Free;
+            end;
+        end;
+    {$ELSE}
+        if OpenDialog2.Execute then begin
+            lcMensaje:='';
+
+            lcProceso := TProcess.Create(nil);
+            lcProceso.Executable := 'svnauthz-validate';
+            lcProceso.Parameters.Add(OpenDialog2.FileName);
+            lcProceso.Options := [poUsePipes,poNoConsole,poStderrToOutPut,poWaitOnExit];
+            lcProceso.Execute;
+
+            lcOutput := TStringList.Create;
+            lcOutput.LoadFromStream(lcProceso.Output);
+
+            if lcOutput.Count > 0 then begin
+                for lnInicio:=0 to lcOutput.Count-1 do begin
+                    lcMensaje:= lcMensaje + lcOutput.Strings[lnInicio] + #13#10;
+                end;
+                ShowMessage(lcMensaje);
+            end
+            else begin
+                ShowMessage('Formato de archivo valido.');
+            end;
+            lcProceso.Free;
+            lcOutput.Free;
+        end;
+    {$ENDIF}
+
+end;
+
 procedure TfrmBuildAuthz.btnAcercadeClick(Sender: TObject);
 begin
     frmAcercade.ShowModal;
@@ -462,6 +552,48 @@ begin
 
     end;
 
+end;
+
+procedure TfrmBuildAuthz.pmCargaUsuarioClick(Sender: TObject);
+var
+   lcLista: TStringList;
+   lnInicio, lnPos: integer;
+   lcUser: string;
+begin
+    if OpenDialog2.Execute then begin
+        if MessageDlg('Question','Desea cargar usuarios?' + #13#10 + 'Si responde que si, la tabla' + #13#10
+        + 'de usuarios y grupos se vaciará!',mtConfirmation, [mbYes, mbNo], 0) = mrYes then begin
+            lcLista := TStringList.Create;
+            lcLista.LoadFromFile(OpenDialog2.FileName);
+            lnInicio := 0;
+            lstUsuarios.Items.Clear;
+            cmbUsuarios.Items.Clear;
+            grdGrupos.Clean;
+
+            repeat
+                lnInicio := lnInicio+1;
+            until lcLista[lnInicio] = '[users]';
+
+            repeat
+                lnInicio := lnInicio+1;
+            until lcLista[lnInicio] <> '';
+
+            repeat
+                if lcLista[lnInicio] <> '' then begin
+                    lcUser := lcLista[lnInicio] ;
+                    lnPos := Pos('=',lcUser);
+                    Delete(lcUser,lnPos,Length(lcUser));
+                    lnPos:=0;
+                    lnPos := Pos(#9,lcUser);
+                    if lnPos > 0 then Delete(lcUser, lnPos,1);
+                    Trim(lcUser);
+                    lstUsuarios.Items.Add(lcUser);
+                    cmbUsuarios.Items.Add(lcUser);
+                    lnInicio := lnInicio+1;
+                end;
+            until lnInicio = lcLista.Count-1;
+        end;
+    end;
 end;
 
 procedure TfrmBuildAuthz.pmBorraGrupoClick(Sender: TObject);
@@ -666,7 +798,7 @@ begin
       Proceso que restringe todos los permisos a todo aquel que no sea
       un usuario o grupo
     }
-    Memo1.Lines.Append(' * = ');
+    Memo1.Lines.Append('* = ');
 end;
 
 procedure TfrmBuildAuthz.btnLimpiaClick(Sender: TObject);
@@ -675,6 +807,29 @@ begin
       Proceso para limpiar la vista previa
     }
     Memo1.Lines.Clear;
+end;
+
+procedure TfrmBuildAuthz.btnGuardaPreviewClick(Sender: TObject);
+begin
+    {
+      Proceso para guardar el preview de los permisos que usaremos
+      para nuestro repositorio.
+    }
+    if svdlgPreview.Execute then begin
+        Memo1.Lines.SaveToFile(svdlgPreview.FileName);
+    end;
+end;
+
+procedure TfrmBuildAuthz.btnCargaPreviewClick(Sender: TObject);
+begin
+    {
+      Proceso para cargar el preview de los permisos que usaremos
+      para nuestro repositorio.
+    }
+    if OpenDialog2.Execute then begin
+        Memo1.Lines.Clear;
+        Memo1.Lines.LoadFromFile(OpenDialog2.FileName);
+    end;
 end;
 
 procedure TfrmBuildAuthz.cmbGruposEditingDone(Sender: TObject);
