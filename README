@@ -1,0 +1,3 @@
+If you want to use the Validation tool in Build Authz, you need to have installed subversion 
+and his tool "svnauthz-validate". For Windows package, the "svnauthz-validate.exe" comes in the 
+package on "svntools" directory.

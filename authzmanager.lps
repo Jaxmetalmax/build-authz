@@ -8,7 +8,6 @@
         <Filename Value="authzmanager.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="authzmanager"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
@@ -23,6 +22,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="buildauthz"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="602"/>
@@ -160,7 +160,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="buildauthz.pas"/>
         <Caret Line="444" Column="1" TopLine="439"/>
@@ -199,88 +199,84 @@
       </Position9>
       <Position10>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="402" Column="96" TopLine="567"/>
+        <Caret Line="581" Column="1" TopLine="568"/>
       </Position10>
       <Position11>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="581" Column="1" TopLine="568"/>
+        <Caret Line="582" Column="1" TopLine="568"/>
       </Position11>
       <Position12>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="582" Column="1" TopLine="568"/>
+        <Caret Line="583" Column="1" TopLine="568"/>
       </Position12>
       <Position13>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="583" Column="1" TopLine="568"/>
+        <Caret Line="584" Column="1" TopLine="568"/>
       </Position13>
       <Position14>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="584" Column="1" TopLine="568"/>
+        <Caret Line="585" Column="1" TopLine="568"/>
       </Position14>
       <Position15>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="585" Column="1" TopLine="568"/>
+        <Caret Line="586" Column="1" TopLine="568"/>
       </Position15>
       <Position16>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="586" Column="1" TopLine="568"/>
+        <Caret Line="590" Column="43" TopLine="571"/>
       </Position16>
       <Position17>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="590" Column="43" TopLine="571"/>
+        <Caret Line="581" Column="1" TopLine="571"/>
       </Position17>
       <Position18>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="581" Column="1" TopLine="571"/>
+        <Caret Line="582" Column="1" TopLine="571"/>
       </Position18>
       <Position19>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="582" Column="1" TopLine="571"/>
+        <Caret Line="583" Column="1" TopLine="571"/>
       </Position19>
       <Position20>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="583" Column="1" TopLine="571"/>
+        <Caret Line="585" Column="1" TopLine="571"/>
       </Position20>
       <Position21>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="585" Column="1" TopLine="571"/>
+        <Caret Line="586" Column="1" TopLine="571"/>
       </Position21>
       <Position22>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="586" Column="1" TopLine="571"/>
+        <Caret Line="587" Column="1" TopLine="571"/>
       </Position22>
       <Position23>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="587" Column="1" TopLine="571"/>
+        <Caret Line="588" Column="1" TopLine="571"/>
       </Position23>
       <Position24>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="588" Column="1" TopLine="571"/>
+        <Caret Line="589" Column="1" TopLine="571"/>
       </Position24>
       <Position25>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="589" Column="1" TopLine="571"/>
+        <Caret Line="585" Column="1" TopLine="571"/>
       </Position25>
       <Position26>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="585" Column="1" TopLine="571"/>
+        <Caret Line="586" Column="1" TopLine="571"/>
       </Position26>
       <Position27>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="586" Column="1" TopLine="571"/>
+        <Caret Line="587" Column="1" TopLine="571"/>
       </Position27>
       <Position28>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="587" Column="1" TopLine="571"/>
+        <Caret Line="588" Column="1" TopLine="571"/>
       </Position28>
       <Position29>
         <Filename Value="buildauthz.pas"/>
-        <Caret Line="588" Column="1" TopLine="571"/>
-      </Position29>
-      <Position30>
-        <Filename Value="buildauthz.pas"/>
         <Caret Line="589" Column="1" TopLine="571"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

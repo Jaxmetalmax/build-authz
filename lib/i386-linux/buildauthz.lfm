@@ -1,8 +1,9 @@
 object frmBuildAuthz: TfrmBuildAuthz
-  Left = 188
+  Left = 198
   Height = 535
-  Top = 15
+  Top = 36
   Width = 767
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Build Authz'
   ClientHeight = 535

@@ -1,7 +1,7 @@
 object frmAcercade: TfrmAcercade
-  Left = 314
+  Left = 307
   Height = 255
-  Top = 185
+  Top = 186
   Width = 570
   BorderStyle = bsDialog
   Caption = 'Acerca de Build Authz...'
@@ -22,14 +22,14 @@ object frmAcercade: TfrmAcercade
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Acerca de...'
-      ClientHeight = 229
-      ClientWidth = 562
+      ClientHeight = 224
+      ClientWidth = 566
       ParentFont = False
       object Label1: TLabel
         Left = 12
-        Height = 19
+        Height = 20
         Top = 66
-        Width = 124
+        Width = 131
         Caption = 'Build Authz v1.1.2'
         Font.CharSet = ANSI_CHARSET
         Font.Color = clBlack
@@ -42,9 +42,9 @@ object frmAcercade: TfrmAcercade
       end
       object Label2: TLabel
         Left = 12
-        Height = 45
+        Height = 52
         Top = 10
-        Width = 525
+        Width = 544
         Caption = 'Build Authz,  herramienta de ayuda para la creación del archivo'#13#10' de configuración "authz" para repositorios SubVersion.'
         Font.CharSet = ANSI_CHARSET
         Font.Color = clBlack
@@ -57,9 +57,9 @@ object frmAcercade: TfrmAcercade
       end
       object Label3: TLabel
         Left = 12
-        Height = 14
+        Height = 18
         Top = 98
-        Width = 47
+        Width = 64
         Caption = 'osversion'
         ParentColor = False
       end
@@ -104,9 +104,9 @@ object frmAcercade: TfrmAcercade
       end
       object Label5: TLabel
         Left = 12
-        Height = 19
+        Height = 18
         Top = 195
-        Width = 233
+        Width = 236
         Caption = 'Como configurar archivo "authz"'
         Font.Color = clBlue
         Font.Height = -15
@@ -120,7 +120,7 @@ object frmAcercade: TfrmAcercade
         Left = 12
         Height = 17
         Top = 171
-        Width = 42
+        Width = 41
         Caption = 'Ayuda:'
         Font.Height = -13
         Font.Name = 'Ubuntu'
@@ -130,8 +130,8 @@ object frmAcercade: TfrmAcercade
     end
     object TabSheet2: TTabSheet
       Caption = 'Tecnologías...'
-      ClientHeight = 235
-      ClientWidth = 562
+      ClientHeight = 224
+      ClientWidth = 566
       object Label6: TLabel
         Left = 12
         Height = 115
@@ -205,8 +205,8 @@ object frmAcercade: TfrmAcercade
     end
     object TabSheet3: TTabSheet
       Caption = 'Autor...'
-      ClientHeight = 235
-      ClientWidth = 562
+      ClientHeight = 224
+      ClientWidth = 566
       object Label9: TLabel
         Left = 12
         Height = 45
@@ -292,4 +292,4 @@ object frmAcercade: TfrmAcercade
       end
     end
   end
-end
+end
