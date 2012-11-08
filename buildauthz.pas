@@ -558,6 +558,11 @@ var
    lnInicio, lnPos: integer;
    lcUser: string;
 begin
+    {
+      Proceso para cargar usuarios desde un archivo passwd con usuarios previamente
+      insertados, si se confirma la carga, antes de realizarla se limpia
+      la tabla de usuarios y grupos.
+    }
     if OpenDialog2.Execute then begin
         if MessageDlg('Question','Desea cargar usuarios?' + #13#10 + 'Si responde que si, la tabla' + #13#10
         + 'de usuarios y grupos se vaciará!',mtConfirmation, [mbYes, mbNo], 0) = mrYes then begin
@@ -581,9 +586,13 @@ begin
                     lcUser := lcLista[lnInicio] ;
                     lnPos := Pos('=',lcUser);
                     Delete(lcUser,lnPos,Length(lcUser));
-                    lnPos:=0;
-                    lnPos := Pos(#9,lcUser);
-                    if lnPos > 0 then Delete(lcUser, lnPos,1);
+                    repeat
+                        //Borra los tabuladores si los hay
+                        lnPos:=0;
+                        lnPos := Pos(#9,lcUser);
+                        if lnPos > 0 then Delete(lcUser, lnPos,1);
+                        lnPos := Pos(#9,lcUser);
+                    until lnPos = 0;
                     Trim(lcUser);
                     lstUsuarios.Items.Add(lcUser);
                     cmbUsuarios.Items.Add(lcUser);

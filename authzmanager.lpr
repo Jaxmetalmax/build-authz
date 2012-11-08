@@ -29,7 +29,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Title:='Build Authz V1.0';
+  Application.Title:='Build Authz V1.1.2';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TfrmBuildAuthz, frmBuildAuthz);
