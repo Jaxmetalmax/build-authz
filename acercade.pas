@@ -2,20 +2,18 @@
 
   Copyright (C) 2012 Max J. Rodríguez Beltran ing.maxjrb@gmail.com
 
-  This source is free software; you can redistribute it and/or modify it under
-  the terms of the GNU General Public License as published by the Free
-  Software Foundation; either version 2 of the License, or (at your option)
-  any later version.
+  This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-  This code is distributed in the hope that it will be useful, but WITHOUT ANY
-  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-  details.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-  A copy of the GNU General Public License is available on the World Wide Web
-  at <http://www.gnu.org/copyleft/gpl.html>. You can also obtain it by writing
-  to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
-  MA 02111-1307, USA.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 unit acercade;
@@ -38,16 +36,22 @@ type
   TfrmAcercade = class(TForm)
     Button1: TButton;
     Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     PageControl1: TPageControl;
     StaticText1: TStaticText;
     StaticText2: TStaticText;
     StaticText3: TStaticText;
+    StaticText4: TStaticText;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
@@ -56,6 +60,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Label5Click(Sender: TObject);
     procedure StaticText1Click(Sender: TObject);
+    procedure StaticText2Click(Sender: TObject);
+    procedure StaticText3Click(Sender: TObject);
+    procedure StaticText4Click(Sender: TObject);
   private
     { private declarations }
     function OSVersion:String;
@@ -100,6 +107,21 @@ begin
     OpenURL('http://jaxmaxblogit.tk');
 end;
 
+procedure TfrmAcercade.StaticText2Click(Sender: TObject);
+begin
+  OpenURL('http://www.apache.org/licences/LICENCE-2.0');
+end;
+
+procedure TfrmAcercade.StaticText3Click(Sender: TObject);
+begin
+  OpenURL('http://www.gnu.org/licences/');
+end;
+
+procedure TfrmAcercade.StaticText4Click(Sender: TObject);
+begin
+  OpenURL('https://code.google.com/p/build-authz/');
+end;
+
 Function TfrmAcercade.OSVersion:String;
 begin
     {$IFDEF Linux}
@@ -128,4 +150,4 @@ begin
 end;
 
 end.
-
+
