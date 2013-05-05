@@ -1,5 +1,5 @@
 Build Authz is a tool to manage and visually build "authz" file for SVN to set access permissions based on directories.
 
 If you want to use the Validation tool in Build Authz, you need to have installed subversion 
-and his tool "svnauthz-validate". For Windows package, the "svnauthz-validate.exe" comes in the 
+and its tool "svnauthz-validate". For Windows package, the "svnauthz-validate.exe" comes in the 
 package on "svntools" directory.
